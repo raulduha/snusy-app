@@ -52,13 +52,14 @@
 .hero-subtitle {
     font-size: 1.5em; /* Aumento del tamaño */
     animation: fadeInUp 1s ease-out 1s forwards; /* Duración de 1 segundo, comienza después de 1 segundo, y con "forwards" mantiene el estado final */
-}.hero-card {
+}
+.hero-card {
     background: rgba(255, 255, 255, 0.9); 
     padding: 40px 60px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
     display: inline-block; 
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 3px solid #000; /* Borde negro de 2px */
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer; 
@@ -68,6 +69,7 @@
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
     }
 }
+
 
 .hero-title {
     margin-bottom: 15px;
