@@ -1,24 +1,32 @@
+/* Navbar.css */
+
 nav {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Cambia esto para alinear todo al principio */
-    background: #00a6a6; 
-    padding: 20px 80px;
+    background: #222;
+    padding: 10px 40px;
+    height: 90px; /* Aumentar la altura del Navbar */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     position: relative;
+    z-index: 2;
 }
 
 .logo {
     position: absolute;
-    left: 20px;
-    top: 50%; 
-    transform: translateY(-50%);
-    height: 120px;
-    width: 120px;
-    background-image: url('../assets/circular.png'); 
+    left: 40px;
+    bottom: -105px; /* Mueve el logo hacia abajo para que esté a mitad de camino */
+    height: 250px;
+    width: 250px;
+    background-image: url('../assets/circular.png');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 ul {
@@ -26,30 +34,40 @@ ul {
     align-items: center;
     list-style-type: none;
     padding: 0;
-    margin-left: auto; /* Esto empujará tu lista al extremo derecho */
+    margin-left: auto;
 }
 
 li {
-    margin-left: 20px;
+    margin-left: 30px;
     position: relative;
 }
 
 li a {
     text-decoration: none;
-    color: #fff;
-    padding: 5px 10px;
-    transition: background 0.3s, color 0.3s;
-    border-radius: 5px;
+    color: #f1f1f1;
+    padding-bottom: 5px;
+    font-family: 'Compacta', sans-serif; /* Fuente similar a Marlboro */
+    transition: color 0.3s;
+    position: relative;
+}
+
+li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
 li a:hover {
-    background-color: #17cf97;
-    color: #1b2430;
+    color: #17cf97;
 }
 
-@media screen and (max-width: 769px) {
-    nav {
-        padding: 20px 20px;
-    }
+li a:hover::before {
+    visibility: visible;
+    width: 100%;
 }
-

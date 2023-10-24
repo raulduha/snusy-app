@@ -1,15 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const Foot = styled.footer`
-  background-color: #00a7c4;
-  padding: 1rem;
-  text-align: center;
-  color: white;
-`;
+import './Footer.css';
 
 function Footer() {
-  return <Foot>© 2023 Snusy. All rights reserved.</Foot>;
+  return <footer>© 2023 Snusy. All rights reserved.</footer>;
 }
 
 export default Footer;
