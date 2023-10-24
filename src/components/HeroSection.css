@@ -45,11 +45,43 @@
 }
 
 .hero-title {
-    font-size: 6em; /* Aumento del tamaño */
+    font-size: 3em; /* Aumento del tamaño */
     animation: fadeInUp 1s ease-out 0.5s forwards; /* Duración de 1 segundo, comienza después de 0.5 segundos, y con "forwards" mantiene el estado final */
 }
 
 .hero-subtitle {
-    font-size: 3em; /* Aumento del tamaño */
+    font-size: 1.5em; /* Aumento del tamaño */
     animation: fadeInUp 1s ease-out 1s forwards; /* Duración de 1 segundo, comienza después de 1 segundo, y con "forwards" mantiene el estado final */
+}.hero-card {
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    display: inline-block; 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; 
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.hero-title {
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Cinzel', sans-serif; 
+    font-size: 3sem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    color: #555;
+    font-weight: 500;
+    font-family: 'Bitter', sans-serif;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }

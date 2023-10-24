@@ -13,7 +13,7 @@ nav {
 
 .logo {
     position: absolute;
-    left: 40px;
+    left: -10px;
     bottom: -105px; /* Mueve el logo hacia abajo para que esté a mitad de camino */
     height: 250px;
     width: 250px;
