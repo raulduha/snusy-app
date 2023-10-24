@@ -1,0 +1,11 @@
+.products-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.products-container h2 {
+    color: #00a6a6;
+    margin-bottom: 20px;
+}

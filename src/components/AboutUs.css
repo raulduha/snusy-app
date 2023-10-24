@@ -1,0 +1,16 @@
+.about-us-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-container h2 {
+    color: #00a6a6;
+    margin-bottom: 20px;
+}
+
+.about-us-container p {
+    font-size: 16px;
+    color: #555;
+}

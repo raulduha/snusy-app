@@ -1,0 +1,55 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Cambia esto para alinear todo al principio */
+    background: #00a6a6; 
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 50%; 
+    transform: translateY(-50%);
+    height: 120px;
+    width: 120px;
+    background-image: url('../assets/circular.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin-left: auto; /* Esto empujará tu lista al extremo derecho */
+}
+
+li {
+    margin-left: 20px;
+    position: relative;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+li a:hover {
+    background-color: #17cf97;
+    color: #1b2430;
+}
+
+@media screen and (max-width: 769px) {
+    nav {
+        padding: 20px 20px;
+    }
+}
+
