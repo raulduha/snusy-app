@@ -3,7 +3,7 @@
 .products-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch; /* Alinea las tarjetas verticalmente */
     flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
     gap: 20px; /* Espacio entre las tarjetas */
     padding: 20px;
@@ -17,6 +17,7 @@
     max-width: 300px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    flex: 1; /* Hace que todas las tarjetas tengan el mismo ancho */
 }
 
 .product-card:hover {
@@ -41,4 +42,8 @@
     font-size: 14px;
     color: #666;
     line-height: 1.5;
+}
+
+.product-card p:last-child {
+    margin-top: 10px; /* Espacio adicional para el precio */
 }
