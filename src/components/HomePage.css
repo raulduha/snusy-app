@@ -1,45 +1,117 @@
-.home-container {
+/* Archivo: HomePage.css */
+.homePage .section {
+    width: 100%;
+    height: 70vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); 
-    /* Removimos el background-image y el backdrop-filter ya que el HeroSection ya se encargará de ello */
+    justify-content: center;
+    text-align: center;
 }
 
-.card {
-    width: 300px;
-    height: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: #ffffff;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
+.homePage .section.photo {
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.homePage .section.photo .welcomeText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 100px;
+    border-radius: 10px;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.homePage .section.black {
+    background-color: black;
+    color: white;
 }
 
-.card-content {
-    padding: 15px;
+.homePage .section.darkGray {
+    background-color: rgb(43, 42, 42);
+    color: black;
 }
 
-.card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.aboutContent {
+    width: 80%;
+    margin: auto;
+    text-align: left;
 }
 
-.card-description {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.5;
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
+
+.feature {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+.historyContent {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+.historyImages {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.historyImages img {
+    width: 30%;
+    border-radius: 10px;
+}
+.productContent .products {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.productContent .product {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.productContent .product img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Estilos para la sección de cómo hacer un pedido */
+.orderingContent {
+    text-align: center;
+    padding: 20px;
+}
+
+.orderingContent .steps {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.orderingContent .step {
+    margin-bottom: 20px;
+}
+
+/* Estilos para la sección de contacto */
+.contactContent {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para la sección de política de devolución */
+.returnPolicyContent {
+    text-align: center;
+    padding: 20px;
+}
+
+
