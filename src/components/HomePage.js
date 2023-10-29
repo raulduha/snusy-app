@@ -43,42 +43,14 @@ const sections = [
                 </p>
                 <div className="historyImages">
                     {/* Asumiendo que las imágenes están en la carpeta src/assets */}
-                    <img src="./assets/history1.jpg" alt="Historia 1" />
-                    <img src="./assets/history2.jpg" alt="Historia 2" />
-                    <img src="./assets/history3.jpg" alt="Historia 3" />
+                    <img src={productImage1} alt="Historia 1" />
+                    <img src={productImage2} alt="Historia 2" />
+                    <img src={productImage3} alt="Historia 3" />
                 </div>
             </div>
         )
     },
     
-    {
-        title: 'Nuestros Productos',
-        content: (
-            <div className="productContent">
-                <p>
-                    Explora nuestra extensa colección de sabores y marcas de snus, cuidadosamente seleccionados para satisfacer las preferencias de los entusiastas del tabaco. Cada producto está elaborado con ingredientes premium para brindar una experiencia de snus incomparable.
-                </p>
-                <div className="products">
-                    <div className="product">
-                        <img src={productImage1} alt="Siberia-80 white dry" />
-                        <h3>Siberia-80 white dry</h3>
-                        <p>Experimenta el refrescante sabor de Siberia-80 white dry con nuestra gama de productos de snus de menta.</p>
-                    </div>
-                    <div className="product">
-                        <img src={productImage2} alt="General White Mint Portion" />
-                        <h3>General White Mint Portion</h3>
-                        <p>Disfruta de las notas ácidas y sabrosas de General White Mint Portion con nuestra colección de snus de cítricos.</p>
-                    </div>
-                    <div className="product">
-                        <img src={productImage3} alt="VELO Ice Mint Strong Slim All White" />
-                        <h3>VELO Ice Mint Strong Slim All White</h3>
-                        <p>Mantén la tradición con VELO Ice Mint Strong Slim All White, elaborado para brindar una auténtica experiencia tabacalera.</p>
-                    </div>
-                </div>
-            </div>
-        )
-    },
-    ,
     {
         title: 'Cómo Hacer un Pedido',
         content: (

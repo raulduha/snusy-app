@@ -1,8 +1,25 @@
-/* Archivo: HomePage.css */
+/* Reset básico para asegurarnos de que todos los navegadores comienzan con una línea base consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.homePage {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .homePage .section {
     width: 100%;
-    height: 70vh;
+    padding: 50px 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -12,17 +29,16 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    color: white;
+    padding: 100px 0;
+    height: auto;
 }
 
 .homePage .section.photo .welcomeText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 100px;
+    padding: 20px;
     border-radius: 10px;
+    width: 70%;
 }
 
 .homePage .section.black {
@@ -32,59 +48,49 @@
 
 .homePage .section.darkGray {
     background-color: rgb(43, 42, 42);
-    color: black;
+    color: white;
 }
 
-.aboutContent {
+/* Secciones comunes */
+.sectionContent {
     width: 80%;
     margin: auto;
     text-align: left;
 }
 
-.features {
-    display: flex;
-    justify-content: space-around;
+.features, .historyImages, .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     margin-top: 20px;
 }
 
-.feature {
-    width: 30%;
+.feature, .product, .historyImages img {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-}
-.historyContent {
-    width: 80%;
-    margin: auto;
-    text-align: left;
-}
-.historyImages {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-.historyImages img {
-    width: 30%;
-    border-radius: 10px;
-}
-.productContent .products {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    transition: transform 0.3s ease;
 }
 
-.productContent .product {
-    width: 30%;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+.feature:hover, .product:hover, .historyImages img:hover {
+    transform: scale(1.05);
 }
 
-.productContent .product img {
+.productContent .product img, .historyImages img {
     max-width: 100%;
     border-radius: 10px;
 }
+
+/* Estilos para móviles */
+@media screen and (max-width: 768px) {
+    .homePage .section.photo .welcomeText {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Otros estilos específicos de las secciones continúan aquí ... */
+
 
 
 /* Estilos para la sección de cómo hacer un pedido */
