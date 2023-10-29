@@ -12,8 +12,9 @@ const Navbar = () => {
             <div className="logo" onClick={() => history('/')}></div>
             <ul id="navbar">
                 
-                <li><Link to="/aboutus">About Us</Link></li>
-                <li><Link to="/products">Products</Link></li>
+            
+                <li><Link to="/products">Productos</Link></li>
+                <li><Link to="/signin">Iniciar sesion</Link></li>
             </ul>
         </nav>
     );
