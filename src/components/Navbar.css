@@ -97,3 +97,18 @@ li a:hover::before {
     visibility: visible;
     width: 100%;
 }
+.profile-icon {
+    margin-right: 10px;
+    color: #f1f1f1;  /* Color del ícono */
+}
+.user-area {
+    margin-left: 20px; /* Separación del área de usuario y la navbar */
+    display: flex; /* Alinear el icono y el nombre horizontalmente */
+    align-items: center; /* Alinear el icono y el nombre verticalmente */
+    color: #f1f1f1;  /* Color del texto del nombre de usuario */
+    cursor: pointer;
+}
+.user-area:hover {
+    color: #17cf97; /* Cambia el color al pasar el ratón por encima */
+}
+
