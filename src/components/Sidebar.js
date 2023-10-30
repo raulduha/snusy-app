@@ -12,7 +12,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <ul>
                     <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
                     <li><Link to="/products" onClick={toggleSidebar}>Productos</Link></li>
-                    <li><Link to="/signin" onClick={toggleSidebar}>Iniciar sesión</Link></li>
+                    <li><Link to="/login" onClick={toggleSidebar}>Iniciar sesión</Link></li>
                 </ul>
             </div>
         </div>
