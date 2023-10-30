@@ -40,7 +40,7 @@ const Navbar = () => {
                     )}
                 </ul>
                 {user && (
-                    <div className="user-area" onClick={handleLogout}>
+                    <div className="user-area">
                         <FontAwesomeIcon icon={faUser} className="profile-icon" />
                         {user.displayName}
                     </div>

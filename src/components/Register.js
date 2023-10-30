@@ -4,7 +4,8 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth, db } from '../firebase';
 import { collection, doc, setDoc } from 'firebase/firestore';
 import './Register.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 function RegisterPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -53,6 +54,7 @@ function RegisterPage() {
 
   return (
     <div className="register-page">
+      <div className="form-container">
       <h1>Regístrate</h1>
       <div className="form-container">
         <form onSubmit={handleSubmit}>
@@ -71,12 +73,16 @@ function RegisterPage() {
           <div className="form-group">
             <label>Contraseña:</label>
             <input type={showPassword ? "text" : "password"} value={formData.password} onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
-            <span onClick={() => setShowPassword(!showPassword)}>👁️</span>
+            <span onClick={() => setShowPassword(!showPassword)}>
+                <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+              </span>
           </div>
           <div className="form-group">
             <label>Repetir Contraseña:</label>
             <input type={showPassword ? "text" : "password"} value={formData.confirmPassword} onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })} />
-            <span onClick={() => setShowPassword(!showPassword)}>👁️</span>
+            <span onClick={() => setShowPassword(!showPassword)}>
+                <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+              </span>
           </div>
           <div className="form-group">
             <label>Fecha de Nacimiento:</label>
@@ -91,6 +97,7 @@ function RegisterPage() {
         <p>
           ¿Ya tienes una cuenta? <Link to="/login">Inicia sesión aquí</Link>
         </p>
+      </div>
       </div>
     </div>
   );

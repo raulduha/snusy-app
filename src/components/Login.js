@@ -4,7 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import './Login.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -27,6 +28,7 @@ function LoginPage() {
 
   return (
     <div className="login-page">
+      <div className="form-container">
       <h1>Iniciar Sesión</h1>
       <div className="form-container">
         <form onSubmit={handleLogin}>
@@ -37,7 +39,9 @@ function LoginPage() {
           <div className="form-group">
             <label>Contraseña:</label>
             <input type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} />
-            <span onClick={() => setShowPassword(!showPassword)}>👁️</span>
+            <span onClick={() => setShowPassword(!showPassword)}>
+                <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+              </span>
           </div>
           {error && <p className="error-message">{error}</p>}
           <button type="submit">Iniciar Sesión</button>
@@ -45,6 +49,7 @@ function LoginPage() {
         <p>
           ¿No tienes una cuenta? <Link to="/register">Regístrate aquí</Link>
         </p>
+        </div>
       </div>
     </div>
   );
