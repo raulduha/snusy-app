@@ -1,5 +1,3 @@
-/* Navbar.css */
-
 nav {
     display: flex;
     align-items: center;
@@ -10,20 +8,48 @@ nav {
     position: relative;
     z-index: 2;
 }
+/* Mobile styles */
+.sidebar-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #f1f1f1;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    /* Oculta la lista de navegación en móviles y muestra el ícono del sidebar */
+    #navbar {
+        display: none;
+    }
+
+    .sidebar-icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* Oculta la lista de navegación en tablet y muestra el ícono del sidebar cuando la pantalla es menor a la mitad */
+    #navbar {
+        display: none;
+    }
+
+    .sidebar-icon {
+        display: block;
+    }
+}
 
 .logo {
-    position: absolute;
-    left: -10px;
-    bottom: -84px;
-    height: 200px;
-    width: 200px;
+    margin-right: auto; /* Esto empujará el logo al centro y las opciones a la derecha */
+    height: 80px; /* Ajusta como prefieras */
+    width: 80px;
     background-image: url('../assets/circular.png');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
     cursor: pointer;
     z-index: 2;
-    transition: opacity 0.3s; /* Agregué una transición para la opacidad */
+    transition: opacity 0.3s;
 }
 
 .logo:hover {
@@ -35,14 +61,12 @@ ul {
     align-items: center;
     list-style-type: none;
     padding: 0;
-    margin-left: auto;
 }
 
 li {
     margin-left: 30px;
     position: relative;
 }
-
 li a {
     text-decoration: none;
     color: #f1f1f1;

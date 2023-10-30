@@ -1,0 +1,73 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    display: block; /* Asegúrate de que se utilice el comportamiento de bloque predeterminado */
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h1, .sidebar h2 {
+    color: #fff;
+    margin: 0 0 20px 0;
+    display: block; /* Establece explícitamente que los títulos tienen un comportamiento de bloque */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    display: block; /* Los enlaces actuarán como bloques, ocupando todo el ancho y apilándose verticalmente */
+    transition: background-color 0.3s;
+}
+
+.sidebar li a:hover {
+    background-color: #555;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: block; /* Comportamiento de bloque para el botón */
+}
+
+.close-btn:focus {
+    outline: none;
+}
+
+.sidebar-content {
+    padding: 10px;
+    width: 100%;
+    display: block; /* Asegura que `sidebar-content` use el comportamiento de bloque */
+}
+
+.sidebar h1, .sidebar h2, .sidebar ul {
+    margin: 0 0 15px 0;
+    width: 100%;
+    display: block; /* Todos los elementos hijos tienen comportamiento de bloque */
+}
