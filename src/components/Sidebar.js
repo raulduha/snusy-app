@@ -8,7 +8,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             <button className="close-btn" onClick={toggleSidebar}>✖</button>
             <div className="sidebar-content">
                 <h1>Menu</h1>
-                <h2>Nombre</h2>
+                <h2></h2>
                 <ul>
                     <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
                     <li><Link to="/products" onClick={toggleSidebar}>Productos</Link></li>
