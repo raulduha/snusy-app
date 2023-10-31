@@ -88,10 +88,19 @@ function RegisterPage() {
             <label>Fecha de Nacimiento:</label>
             <input type="date" value={formData.birthDate} onChange={(e) => setFormData({ ...formData, birthDate: e.target.value })} />
           </div>
+          
           <div className="form-group">
-            <label>Teléfono:</label>
-            <input type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
+              <label>Teléfono:</label>
+              <input 
+                  type="tel" 
+                  value={formData.phone} 
+                  placeholder="+56 (9) 1234 1234"
+                  
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              />
           </div>
+
+
           <button type="submit">Registrarse</button>
         </form>
         <p>

@@ -10,7 +10,21 @@ body {
     padding: 60px 20px;  /* Aumentar el padding vertical */
     min-height: calc(100vh - 120px); /* Restar el alto aproximado del navbar y footer juntos */
 }
-  
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.phone-prefix {
+  margin-right: 190px; /* Espaciado entre el prefijo y el input */
+}
+
+.phone-input {
+  padding-left: 50px; /* Ajusta este valor según necesites */
+ /* Este margen permitirá hacer clic en el input */
+}
+
   .form-container {
     background: white;
     padding: 30px 40px;
