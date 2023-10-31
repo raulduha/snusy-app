@@ -2,9 +2,9 @@ import React from 'react';
 import './Products.css';
 
 // Importa las imágenes directamente desde la carpeta "assets"
-import productImage1 from '../assets/snp1.jpg';
-import productImage2 from '../assets/snp2.jpg';
-import productImage3 from '../assets/snp3.jpg';
+import productImage1 from '../../assets/snp1.jpg';
+import productImage2 from '../../assets/snp2.jpg';
+import productImage3 from '../../assets/snp3.jpg';
 
 const products = [
     {

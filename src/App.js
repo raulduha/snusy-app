@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomePage from './components/HomePage';
-import AboutUs from './components/AboutUs'; 
-import Products from './components/Products'; 
-import Footer from './components/Footer';
-import Login from './components/Login';
-import Register from './components/Register';
+import Navbar from './components/navbar/Navbar';
+import HomePage from './components/homepage/HomePage';
+import AboutUs from './components/aboutus/AboutUs';
+import Products from './components/products/Products'; 
+import Footer from './components/footer/Footer';
+import Login from './components/login/Login';
+import Register from './components/register/Register';
 import './firebase';
-import { AuthProvider } from './components/AuthProvider';
-import AgeVerificationModal from './components/AgeVerificationModal';
+import { AuthProvider } from './components/authprovider/AuthProvider';
+import AgeVerificationModal from './components/ageverificationmodal/AgeVerificationModal';
 
 function App() {
   const [showModal, setShowModal] = useState(true);

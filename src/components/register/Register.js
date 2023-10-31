@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { auth, db } from '../firebase';
+import { auth, db } from '../../firebase';
 import { collection, doc, setDoc } from 'firebase/firestore';
 import './Register.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

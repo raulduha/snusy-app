@@ -1,10 +1,10 @@
 // Archivo: HomePage.js
 import React from 'react';
 import './HomePage.css';
-import grizzlySnusImage from '../assets/GrizzlySnus.jpg';  // Asegúrate de que la ruta a la imagen sea correcta
-import productImage1 from '../assets/snp1.jpg';
-import productImage2 from '../assets/snp2.jpg';
-import productImage3 from '../assets/snp3.jpg';
+import grizzlySnusImage from '../../assets/GrizzlySnus.jpg';  // Asegúrate de que la ruta a la imagen sea correcta
+import productImage1 from '../../assets/snp1.jpg';
+import productImage2 from '../../assets/snp2.jpg';
+import productImage3 from '../../assets/snp3.jpg';
 const sections = [
     {
         title: 'Sobre Snus',

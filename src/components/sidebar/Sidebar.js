@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth } from '../../firebase';
 import './Sidebar.css';
-import { useAuth } from './AuthProvider'; // Asegúrate de tener la ruta correcta aquí
+import { useAuth } from '../authprovider/AuthProvider'; // Asegúrate de tener la ruta correcta aquí
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const { user } = useAuth();

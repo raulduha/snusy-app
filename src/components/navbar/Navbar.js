@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
-import Sidebar from './Sidebar';
-import { useAuth } from './AuthProvider';
+import Sidebar from '../sidebar/Sidebar';
+import { useAuth } from '../authprovider/AuthProvider';
 import { signOut } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth } from '../../firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
