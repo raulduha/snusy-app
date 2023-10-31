@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
-
+import axios from 'axios';
+import './Cart.css';
 function Cart() {
     const [cartItems, setCartItems] = useState([]);
 
+
+
     useEffect(() => {
-        // Aquí iría tu llamada al endpoint para obtener los productos en el carrito del usuario
-        // Por ejemplo: axios.get('/api/cart/').then(response => setCartItems(response.data));
+        axios.get('http://localhost:8000/api/cart/')
+        .then(response => setCartItems(response.data))
+        .catch(error => console.error("Error fetching cart items:", error));
     }, []);
+
 
     // Función para manejar la eliminación de un producto del carrito
     const handleRemoveFromCart = (productId) => {

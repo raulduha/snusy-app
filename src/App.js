@@ -12,7 +12,7 @@ import { AuthProvider } from './components/authprovider/AuthProvider';
 import AgeVerificationModal from './components/ageverificationmodal/AgeVerificationModal';
 import Cart from './components/cart/Cart';
 import ProductDetail from './components/productdetail/ProductDetail';
-
+import ProductList from './components/productlist/ProductList';
 function App() {
   const [showModal, setShowModal] = useState(true);
 
@@ -34,10 +34,10 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/products" element={<Products />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/productss/:productId" element={<ProductDetail />} />
+            <Route path="/products" element={<ProductList />} />
+            <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
 
           </Routes>

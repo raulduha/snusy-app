@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
+import axios from 'axios';
+import './ProductDetail.css';
 function ProductDetail() {
     const { productId } = useParams();
     const [product, setProduct] = useState(null);
 
+    
     useEffect(() => {
-        // Aquí iría tu llamada al endpoint para obtener los detalles del producto por su ID
-        // Por ejemplo: axios.get(`/api/products/${productId}`).then(response => setProduct(response.data));
+        axios.get(`http://localhost:8000/api/products/${productId}/`)
+        .then(response => setProduct(response.data))
+        .catch(error => console.error("Error fetching product details:", error));
     }, [productId]);
 
     if (!product) return <p>Cargando...</p>;
 
     return (
         <div className="product-detail">
-            <img src={product.imageURL} alt={product.name} />
+            <img src={product.image} alt={product.name} />
             <h2>{product.name}</h2>
             <p>{product.description}</p>
             <p>{product.price}</p>
