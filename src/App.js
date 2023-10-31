@@ -10,6 +10,8 @@ import Register from './components/register/Register';
 import './firebase';
 import { AuthProvider } from './components/authprovider/AuthProvider';
 import AgeVerificationModal from './components/ageverificationmodal/AgeVerificationModal';
+import Cart from './components/cart/Cart';
+import ProductDetail from './components/productdetail/ProductDetail';
 
 function App() {
   const [showModal, setShowModal] = useState(true);
@@ -35,6 +37,9 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/productss/:productId" element={<ProductDetail />} />
+            <Route path="/cart" element={<Cart />} />
+
           </Routes>
           <Footer />
         </div>
