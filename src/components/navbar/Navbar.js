@@ -1,16 +1,20 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import { useAuth } from '../authprovider/AuthProvider';
-
+import Sidebar from '../sidebar/Sidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const isAuthenticated = !!user;
-
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+};
   const handleLogout = async () => {
     try {
       await logout();  // Utiliza la función de cierre de sesión proporcionada por el hook de autenticación
@@ -23,6 +27,7 @@ const Navbar = () => {
   return (
     <>
       <nav>
+      <div className="sidebar-icon" onClick={toggleSidebar}>&#9776;</div>
         <div className="logo" onClick={() => navigate('/')}></div>
         <ul id="navbar">
           <li><Link to="/products">Productos</Link></li>
@@ -35,10 +40,11 @@ const Navbar = () => {
         {isAuthenticated && (
           <div className="user-area">
             <FontAwesomeIcon icon={faUser} className="profile-icon" />
-            {user.username}
+            {user.first_name}
           </div>
         )}
       </nav>
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </>
   );
 };

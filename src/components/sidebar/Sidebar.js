@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { signOut } from 'firebase/auth';
-import { auth } from '../../firebase';
+import { Link, useNavigate } from 'react-router-dom'; // Importa useNavigate
 import './Sidebar.css';
-import { useAuth } from '../authprovider/AuthProvider'; // Asegúrate de tener la ruta correcta aquí
+import { useAuth } from '../authprovider/AuthProvider';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-    const { user } = useAuth();
+    const { user, logout } = useAuth(); // Obtiene logout de useAuth
+    const navigate = useNavigate(); // Define navigate
 
     const handleLogout = async () => {
         try {
-            await signOut(auth);
-            // Aquí, necesitas redirigir al usuario después de cerrar sesión, puedes usar navigate o otro enfoque que tengas en mente.
+            await logout();
+            toggleSidebar();
+            navigate('/login');
         } catch (error) {
             console.error("Error al cerrar sesión:", error.message);
         }
