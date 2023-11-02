@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import HomePage from './components/homepage/HomePage';
 import AboutUs from './components/aboutus/AboutUs';
-import Products from './components/products/Products'; 
+
 import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
-
+import DeleteProduct from './components/productlist/DeleteProduct';
+import EditProduct from './components/productlist/EditProduct';
+import CreateProduct from './components/productlist/CreateProduct';
 import { AuthProvider } from './components/authprovider/AuthProvider';
 import AgeVerificationModal from './components/ageverificationmodal/AgeVerificationModal';
 import Cart from './components/cart/Cart';
@@ -39,6 +41,9 @@ function App() {
             <Route path="/products" element={<ProductList />} />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/products/create" element={<CreateProduct />} />
+            <Route path="/products/edit/:productId" element={<EditProduct />} />
+            <Route path="/products/delete/:productId" element={<DeleteProduct />} />
 
           </Routes>
           <Footer />

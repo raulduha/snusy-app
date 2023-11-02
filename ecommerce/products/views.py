@@ -1,5 +1,5 @@
 # products/views.py
-
+from .permissions import IsAdminOrReadOnly
 from rest_framework import generics
 from .models import Product, Cart
 from .serializers import ProductSerializer, CartSerializer
@@ -7,10 +7,12 @@ from .serializers import ProductSerializer, CartSerializer
 class ProductList(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    permission_classes = [IsAdminOrReadOnly]
 
 class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    permission_classes = [IsAdminOrReadOnly]
 
 class CartList(generics.ListCreateAPIView):
     serializer_class = CartSerializer
