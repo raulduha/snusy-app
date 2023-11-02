@@ -6,12 +6,6 @@ body {
     background-color: #f4f4f4;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 h2, h3, p {
     margin: 0;
 }
@@ -116,57 +110,5 @@ img {
 
 /* Si tienes más componentes, puedes continuar definiendo estilos para ellos aquí */
 
-.add-product-button {
-    margin-bottom: 20px;
-}
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
-.btn:hover {
-    background-color: #0056b3;
-}
-
-.btn-edit {
-    background-color: #FFC107;
-}
-
-.btn-edit:hover {
-    background-color: #ff9f00;
-}
-
-.btn-delete {
-    background-color: #DC3545;
-}
-
-.btn-delete:hover {
-    background-color: #c82333;
-}
-
-.admin-actions {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.product-item {
-    background: #fff;
-    margin-bottom: 20px;
-    width: calc(33.333% - 20px);
-    border: 1px solid #ddd;
-    transition: 0.3s;
-    position: relative;
-    padding: 10px;
-    box-sizing: border-box;
-}

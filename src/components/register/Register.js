@@ -70,7 +70,7 @@ function RegisterPage() {
         console.log('Registro exitoso');
         const data = await response.json();
         login(data.user_details, data.token);  // Asume que el backend devuelve un objeto de usuario junto con el token
-        navigate('/login');
+        navigate('/');
       } else {
         const errorData = await response.json();
         console.error("Error en el registro:", errorData);
