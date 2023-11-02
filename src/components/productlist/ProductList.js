@@ -30,36 +30,36 @@ function ProductList() {
     const filteredProducts = products.filter(product => {
         const inPriceRange = product.price >= priceRange[0] && product.price <= priceRange[1];
         const matchesSearch = product.name.toLowerCase().includes(search.toLowerCase()) || 
-                              product.description.toLowerCase().includes(search.toLowerCase());
+                            product.description.toLowerCase().includes(search.toLowerCase());
         return inPriceRange && matchesSearch;
     });
 
     return (
         <div className="container">
-            <div className="sidebar">
-                {user && user.role === 'admin' && (
-                    <div className="add-product-button">
-                        <Link to="/products/create" className="btn">Agregar Producto</Link>
-                    </div>
-                )}
-                <div className="filter-section">
-                    <input type="text" placeholder="Buscar..." value={search} onChange={handleSearchChange} />
-                    <select value={`${priceRange[0]}-${priceRange[1]}`} onChange={handlePriceRangeChange}>
-                        <option value="5000-9000">Todos los precios</option>
-                        <option value="5000-6000">$5000 - $6000</option>
-                        <option value="6000-7000">$6000 - $7000</option>
-                        <option value="7000-8000">$7000 - $8000</option>
-                        <option value="8000-9000">$8000 - $9000</option>
-                    </select>
-                </div>
+        {user && user.role === 'admin' && (
+            <div className="add-product-button">
+                <Link to="/products/create" className="btn">Agregar Producto</Link>
             </div>
-            <div className="product-list">
+        )}
+        <div className="filter-section">
+            <input type="text" placeholder="Buscar..." value={search} onChange={handleSearchChange} />
+            <select value={`${priceRange[0]}-${priceRange[1]}`} onChange={handlePriceRangeChange}>
+                <option value="5000-9000">Todos los precios</option>
+                <option value="5000-6000">$5000 - $6000</option>
+                <option value="6000-7000">$6000 - $7000</option>
+                <option value="7000-8000">$7000 - $8000</option>
+                <option value="8000-9000">$8000 - $9000</option>
+            </select>
+        </div>
+        <div className="product-list">
             {filteredProducts.map(product => (
                 <div key={product.id} className="product-item">
-                    <Link to={`/products/${product.id}`}>
+                    <Link to={`/products/${product.id}`} className="product-link">
                         <img src={product.image} alt={product.name} />
                         <h3>{product.name}</h3>
+                        <p>{product.description}</p>
                         <p>{product.price}</p>
+                        <p>Stock: {product.stock}</p>
                     </Link>
     
                     {/* Muestra los botones de editar y eliminar solo si el usuario es admin */}
