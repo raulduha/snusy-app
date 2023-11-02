@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Register.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-
+import { useAuth } from '../authprovider/AuthProvider';
 function RegisterPage() {
   const [formData, setFormData] = useState({
     username:'',
@@ -19,6 +19,7 @@ function RegisterPage() {
   });
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const { login, logout } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,6 +51,8 @@ function RegisterPage() {
       last_name: formData.last_name,
       email: formData.email,
       password: formData.password,
+      confirmPassword: formData.confirmPassword,
+
       birth_date: formattedBirthDate, // Use the formatted date
       phone_number: formData.phone_number,
       role: formData.role
@@ -65,6 +68,8 @@ function RegisterPage() {
       });
       if (response.ok) {
         console.log('Registro exitoso');
+        const data = await response.json();
+        login(data.user_details, data.token);  // Asume que el backend devuelve un objeto de usuario junto con el token
         navigate('/login');
       } else {
         const errorData = await response.json();

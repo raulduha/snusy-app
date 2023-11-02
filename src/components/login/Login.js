@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
-
+import { useAuth } from '../authprovider/AuthProvider';
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { login, logout } = useAuth();
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     const loginData = {
-      email: email,
+      username: email,
       password: password,
     };
 
     try {
-      const response = await fetch('http://localhost:8000/api/logins/', {
+      const response = await fetch('http://localhost:8000/api/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,17 +26,16 @@ function LoginPage() {
         body: JSON.stringify(loginData),
       });
 
+      // En LoginPage
       if (response.ok) {
-        const data = await response.json();
-        if (data.token) {
-          // La respuesta contiene el token, puedes analizarla aquí
-          localStorage.setItem('authToken', data.token);
-          navigate('/'); // Navega a la página principal después del inicio de sesión exitoso
-        } else {
-          // La respuesta no contiene el token esperado
-          setError("Respuesta de inicio de sesión incompleta");
-        }
-      } else {
+            const data = await response.json();
+            if (data.token) {
+              login(data.user_details, data.token);  // Asume que el backend devuelve un objeto de usuario junto con el token
+              navigate('/');
+            } else {
+              setError("Respuesta de inicio de sesión incompleta");
+            }
+      }else {
         const errorData = await response.json();
         console.error("Error en el inicio de sesión:", errorData);
         setError(errorData.detail);

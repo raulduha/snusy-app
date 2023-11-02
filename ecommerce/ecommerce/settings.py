@@ -82,6 +82,10 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Autenticación por modelo de usuario
+]
+
 WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 
