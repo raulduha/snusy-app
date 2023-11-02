@@ -24,6 +24,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include('users.urls')),  # This assumes you have a separate api_urls.py in your_app
     path('', include('products.urls')),  # Asegúrate de reemplazar 'products' si tu app tiene un nombre diferente
 ]
 

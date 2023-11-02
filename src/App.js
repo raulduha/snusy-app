@@ -7,7 +7,7 @@ import Products from './components/products/Products';
 import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
-import './firebase';
+
 import { AuthProvider } from './components/authprovider/AuthProvider';
 import AgeVerificationModal from './components/ageverificationmodal/AgeVerificationModal';
 import Cart from './components/cart/Cart';
