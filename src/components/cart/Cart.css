@@ -5,7 +5,14 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+.cart-icon {
+    color: #000;  /* Color negro */
+    text-decoration: none;  /* Remueve el subrayado del enlace */
+}
 
+.cart-icon:hover {
+    color: #007BFF;  /* Cambia el color al azul de Bootstrap cuando se pasa el ratón por encima */
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;

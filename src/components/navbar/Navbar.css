@@ -51,7 +51,14 @@ nav {
     z-index: 2;
     transition: opacity 0.3s;
 }
+.cart-icon {
+    color: #000;  /* Color negro */
+    text-decoration: none;  /* Remueve el subrayado del enlace */
+}
 
+.cart-icon:hover {
+    color: #007BFF;  /* Cambia el color al azul de Bootstrap cuando se pasa el ratón por encima */
+}
 .logo:hover {
     opacity: 0.8;
 }

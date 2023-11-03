@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import HomePage from './components/homepage/HomePage';
 import AboutUs from './components/aboutus/AboutUs';
-
 import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
@@ -15,6 +14,7 @@ import AgeVerificationModal from './components/ageverificationmodal/AgeVerificat
 import Cart from './components/cart/Cart';
 import ProductDetail from './components/productdetail/ProductDetail';
 import ProductList from './components/productlist/ProductList';
+import { CartProvider } from './components/cart/CartContext';
 function App() {
   const [showModal, setShowModal] = useState(true);
 
@@ -29,6 +29,7 @@ function App() {
 
   return (
     <AuthProvider>
+      <CartProvider>
       <Router>
         <div className="App">
           {showModal && <AgeVerificationModal onConfirm={handleConfirm} onDeny={handleDeny} />}
@@ -49,6 +50,7 @@ function App() {
           <Footer />
         </div>
       </Router>
+      </CartProvider>
     </AuthProvider>
   );
 }

@@ -1,34 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// Cart.js
+import React, { useContext } from 'react';
+
 import './Cart.css';
+import { CartContext } from './CartContext';
+
 function Cart() {
-    const [cartItems, setCartItems] = useState([]);
+    const { cartState, cartDispatch } = useContext(CartContext);
 
-
-
-    useEffect(() => {
-        axios.get('http://localhost:8000/api/cart/')
-        .then(response => setCartItems(response.data))
-        .catch(error => console.error("Error fetching cart items:", error));
-    }, []);
-
-
-    // Función para manejar la eliminación de un producto del carrito
     const handleRemoveFromCart = (productId) => {
-        // Aquí iría tu llamada al endpoint para eliminar el producto del carrito
-        // Actualizar luego el estado local con setCartItems
+        cartDispatch({
+            type: 'REMOVE_ITEM',
+            payload: { id: productId }
+        });
     };
 
     return (
         <div className="cart">
-            {cartItems.map(item => (
+            {cartState.items.map(item => (
                 <div key={item.product.id} className="cart-item">
-                    <img src={item.product.imageURL} alt={item.product.name} />
+                    <img src={item.product.image} alt={item.product.name} />
                     <h3>{item.product.name}</h3>
                     <p>{item.product.price}</p>
                     <button onClick={() => handleRemoveFromCart(item.product.id)}>Eliminar</button>
                 </div>
-            ))}
+            ))
+            
+            }
         </div>
     );
 }
