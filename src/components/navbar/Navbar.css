@@ -43,7 +43,7 @@ nav {
     margin-right: auto; /* Esto empujará el logo al centro y las opciones a la derecha */
     height: 80px; /* Ajusta como prefieras */
     width: 80px;
-    background-image: url('../../assets/circular.png');
+    background-image: url('../../assets/snusylab.png');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
