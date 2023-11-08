@@ -13,7 +13,7 @@ const HeroSection = () => {
             <div className="hero-container">
                 <div className="hero-content">
                     <div className="hero-card">
-                        <h1 className="hero-title">SNUSY.cl</h1>
+                        <h1 className="hero-title">SNUSYLAB.cl</h1>
                         <p className="hero-subtitle">Próximamente</p>
                     </div>
                 </div>

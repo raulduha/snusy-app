@@ -51,25 +51,7 @@ const sections = [
         )
     },
     
-    {
-        title: 'Cómo Hacer un Pedido',
-        content: (
-            <div className="orderingContent">
-                <p>
-                    Realizar un pedido de tus productos favoritos de snus es rápido y sencillo. Sigue nuestra guía paso a paso para completar tu compra sin complicaciones. Ofrecemos múltiples opciones de pago y brindamos servicios de envío confiables para asegurarnos de que tu pedido te llegue a tiempo.
-                </p>
-                {/* Los pasos de cómo hacer un pedido */}
-                <div className="steps">
-                    {/* ... (replica el siguiente bloque para cada paso) */}
-                    <div className="step">
-                        <h3>Paso 1: Explora nuestra selección</h3>
-                        <p>Explora nuestro sitio web y navega por nuestra amplia gama de sabores y marcas de snus.</p>
-                    </div>
-                    {/* ... */}
-                </div>
-            </div>
-        )
-    },
+    
     {
         title: 'Contacto',
         content: (
@@ -81,17 +63,7 @@ const sections = [
             </div>
         )
     },
-    {
-        title: 'Política de Devolución',
-        content: (
-            <div className="returnPolicyContent">
-                <p>
-                    Nos esforzamos por la satisfacción del cliente y ofrecemos una política de devolución justa. Si no estás completamente satisfecho con tus productos de snus, por favor revisa nuestra política de devolución e inicia el proceso de devolución o intercambio dentro de los 14 días posteriores a la compra.
-                </p>
-                {/* ... (información adicional) */}
-            </div>
-        )
-    }
+    
 ];
 
 
@@ -100,7 +72,7 @@ const HomePage = () => {
         <div className="homePage">
             <div className="section photo" style={{ backgroundColor: 'gray !important', backgroundImage: `url(${grizzlySnusImage})` }}>
                 <div className="welcomeText">
-                    <h1>¡Bienvenido a Snusy.cl! Tu tienda en línea de snus todo en uno</h1>
+                    <h1>¡Bienvenido a SNUSYLAB! Tu tienda en línea de snus todo en uno</h1>
                     <p>
                         Descubre la historia del snus en Chile y por qué se ha convertido en una opción popular entre los entusiastas del tabaco.
                         Explora nuestra amplia selección de productos auténticos de snus y vive los audaces sabores y la comodidad que ofrece el snus.
