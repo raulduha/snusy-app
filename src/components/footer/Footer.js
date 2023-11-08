@@ -7,7 +7,7 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading' style={{ color: '#fff' }}>
-          Conócenos!
+          Conócenos! al +56 9 5689 9114
         </p>
         <p className='footer-subscription-text' style={{ color: '#fff' }}>
           {/* Tu texto de suscripción aquí */}
@@ -64,7 +64,7 @@ function Footer() {
         <div className='social-media-wrap'>
           <div className='footer-logo'>
             <Link to='/' className='social-logo' style={{ color: '#fff' }}>
-              Snusy.cl
+              SNUSYLAB.cl
               <i className='fab fa-teamspeak' />
             </Link>
           </div>
