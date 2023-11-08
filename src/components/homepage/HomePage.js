@@ -1,7 +1,7 @@
 // Archivo: HomePage.js
 import React from 'react';
 import './HomePage.css';
-import grizzlySnusImage from '../../assets/GrizzlySnus.jpg';  // Asegúrate de que la ruta a la imagen sea correcta
+import grizzlySnusImage from '../../assets/portada.jpg';  // Asegúrate de que la ruta a la imagen sea correcta
 import productImage1 from '../../assets/snp1.jpg';
 import productImage2 from '../../assets/snp2.jpg';
 import productImage3 from '../../assets/snp3.jpg';
@@ -33,13 +33,11 @@ const sections = [
         )
     },
     {
-        title: 'Historia del Snus',
+        title: 'Uso del Snus',
         content: (
             <div className="historyContent">
                 <p>
-                    Sumérgete en la fascinante historia del snus, un producto de tabaco con raíces centenarias.
-                    Desde sus orígenes en Suecia hasta su popularidad internacional, descubre cómo el snus ha
-                    evolucionado a lo largo del tiempo y se ha convertido en una opción favorita para los amantes del tabaco.
+                
                 </p>
                 <div className="historyImages">
                     {/* Asumiendo que las imágenes están en la carpeta src/assets */}
@@ -72,7 +70,7 @@ const HomePage = () => {
         <div className="homePage">
             <div className="section photo" style={{ backgroundColor: 'gray !important', backgroundImage: `url(${grizzlySnusImage})` }}>
                 <div className="welcomeText">
-                    <h1>¡Bienvenido a SNUSYLAB! Tu tienda en línea de snus todo en uno</h1>
+                    <h1>¡Bienvenido a SNUSYLAB!</h1>
                     <p>
                         Descubre la historia del snus en Chile y por qué se ha convertido en una opción popular entre los entusiastas del tabaco.
                         Explora nuestra amplia selección de productos auténticos de snus y vive los audaces sabores y la comodidad que ofrece el snus.

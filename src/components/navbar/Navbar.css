@@ -1,7 +1,7 @@
 nav {
     display: flex;
     align-items: center;
-    background: #222;
+    background: rgba(191, 239, 255);
     padding: 10px 40px;
     height: 90px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
@@ -13,7 +13,7 @@ nav {
     display: none;
     font-size: 24px;
     cursor: pointer;
-    color: #f1f1f1;
+    color: rgb(42, 115, 139);
     margin-right: 20px;
 }
 
@@ -69,7 +69,7 @@ li {
 }
 li a {
     text-decoration: none;
-    color: #f1f1f1;
+    color: rgb(42, 115, 139);
     padding-bottom: 5px;
     font-family: 'Compacta', sans-serif;
     transition: color 0.3s;
@@ -84,7 +84,7 @@ li a::before {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #17cf97; /* Cambié el color a verde cuando se activa */
+    background-color: rgb(42, 115, 139); /* Cambié el color a verde cuando se activa */
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -99,16 +99,16 @@ li a:hover::before {
 }
 .profile-icon {
     margin-right: 10px;
-    color: #f1f1f1;  /* Color del ícono */
+    color: rgb(42, 115, 139);  /* Color del ícono */
 }
 .user-area {
     margin-left: 20px; /* Separación del área de usuario y la navbar */
     display: flex; /* Alinear el icono y el nombre horizontalmente */
     align-items: center; /* Alinear el icono y el nombre verticalmente */
-    color: #f1f1f1;  /* Color del texto del nombre de usuario */
+    color: rgb(42, 115, 139);  /* Color del texto del nombre de usuario */
     cursor: pointer;
 }
 .user-area:hover {
-    color: #17cf97; /* Cambia el color al pasar el ratón por encima */
+    color: rgb(42, 115, 139); /* Cambia el color al pasar el ratón por encima */
 }
 

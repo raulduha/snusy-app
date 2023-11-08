@@ -29,13 +29,15 @@ body, html {
     background-size: cover;
     background-position: center;
     position: relative;
-    color: white;
-    padding: 100px 0;
+    color: rgb(226, 248, 255);
+    padding: 237px 0; /* Aumenta el padding vertical para hacer la sección más alta */
     height: auto;
 }
 
+
+
 .homePage .section.photo .welcomeText {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px 40px; /* Incrementé el padding horizontal */
     border-radius: 10px;
     width: 70%;
@@ -43,12 +45,12 @@ body, html {
 
 .homePage .section.black {
     background-color: black;
-    color: white;
+    color: rgb(241, 252, 255);
 }
 
 .homePage .section.darkGray {
-    background-color: rgb(43, 42, 42);
-    color: white;
+    background-color: rgb(155, 220, 240);
+    color: rgb(0, 0, 0);
 }
 
 /* Secciones comunes */
@@ -67,8 +69,8 @@ body, html {
 }
 
 .feature, .product, .historyImages img {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px 40px;
+    background-color: rgba(24, 24, 24, 0.1);
+    padding: 0px 0px;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }

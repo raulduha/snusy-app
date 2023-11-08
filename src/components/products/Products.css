@@ -7,13 +7,13 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 .product-card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     width: 100%;
     text-align: center;
     transition: transform 0.3s ease-in-out;
