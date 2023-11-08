@@ -11,19 +11,19 @@ const products = [
         image: productImage1,
         title: 'Siberia -80 White Dry    ',
         description: 'White dry portion with taste of spearmint',
-        price: '8,000 CLP',
+        price: '7.990 CLP',
     },
     {
         image: productImage2,
         title: 'VELO Ice cool mint strong slim all white',
         description: 'Slim all white portion with taste of mint and peppermint',
-        price: '8,000 CLP',
+        price: '8.590 CLP',
     },
     {
         image: productImage3,
         title: 'General White Mint Portion',
         description: 'White portion with a cooling taste of mint',
-        price: '8,000 CLP',
+        price: '7.490 CLP',
     },
 ];
 
