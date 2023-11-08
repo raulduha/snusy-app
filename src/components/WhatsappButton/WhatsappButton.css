@@ -1,0 +1,27 @@
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px; /* Puedes ajustar esto para que no se sobreponga al footer */
+    right: 40px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000; /* Asegúrate de que sea mayor que el z-index del footer si tiene uno */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Para que se muestre el cursor de clic */
+  }
+  
+  /* Puedes agregar :hover y otros pseudo-selectores si quieres */
+  
+  .whatsapp-float:hover {
+    color: #FFF;
+    text-decoration: none;
+    background-color: #20B45B;
+  }
+  

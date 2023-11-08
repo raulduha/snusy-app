@@ -12,7 +12,7 @@ import { AuthProvider } from './components/authprovider/AuthProvider';
 import AgeVerificationModal from './components/ageverificationmodal/AgeVerificationModal';
 import Cart from './components/cart/Cart';
 import ProductDetail from './components/productdetail/ProductDetail';
-
+import WhatsAppButton from './components/WhatsappButton/WhatsappButton';
 function App() {
   const [showModal, setShowModal] = useState(true);
 
@@ -41,6 +41,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
 
           </Routes>
+          <WhatsAppButton />
           <Footer />
         </div>
       </Router>
