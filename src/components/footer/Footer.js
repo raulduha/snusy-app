@@ -7,7 +7,7 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading' style={{ color: '#fff' }}>
-          Conócenos! al +56 9 5689 9114
+        Contáctanos! al +56 9 5689 9114
         </p>
         <p className='footer-subscription-text' style={{ color: '#fff' }}>
           {/* Tu texto de suscripción aquí */}
