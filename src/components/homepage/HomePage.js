@@ -2,9 +2,10 @@
 import React from 'react';
 import './HomePage.css';
 import grizzlySnusImage from '../../assets/portada.jpg';  // Asegúrate de que la ruta a la imagen sea correcta
-import productImage1 from '../../assets/snp1.jpg';
-import productImage2 from '../../assets/snp2.jpg';
-import productImage3 from '../../assets/snp3.jpg';
+import productImage1 from '../../assets/1snus.png';
+import productImage2 from '../../assets/2snus.png';
+import productImage3 from '../../assets/3snus.png';
+import productImage4 from '../../assets/4snusy.png';
 const sections = [
     {
         title: 'Sobre Snus',
@@ -33,7 +34,7 @@ const sections = [
         )
     },
     {
-        title: 'Uso del Snus',
+        title: 'Instrucciónes sobre el uso del snus',
         content: (
             <div className="historyContent">
                 <p>
@@ -41,9 +42,10 @@ const sections = [
                 </p>
                 <div className="historyImages">
                     {/* Asumiendo que las imágenes están en la carpeta src/assets */}
-                    <img src={productImage1} alt="Historia 1" />
-                    <img src={productImage2} alt="Historia 2" />
-                    <img src={productImage3} alt="Historia 3" />
+                    <img src={productImage1} alt="instrucción 1" />
+                    <img src={productImage2} alt="instrucción 2" />
+                    <img src={productImage3} alt="instrucción 3" />
+                    <img src={productImage4} alt="instrucción 4" />
                 </div>
             </div>
         )

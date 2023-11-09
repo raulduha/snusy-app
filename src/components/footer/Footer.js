@@ -7,7 +7,7 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading' style={{ color: '#000000' }}>
-          Contáctanos! al +56 9 5689 9114
+          Contáctanos! 
         </p>
         <p className='footer-subscription-text' style={{ color: '#000000' }}>
           {/* Tu texto de suscripción aquí */}
@@ -22,7 +22,8 @@ function Footer() {
               style={{ color: '#000000' }}  // Asegúrate de que el texto dentro del input también sea negro
             />
             {/* Botón personalizado */}
-            <button className='btn btn--outline' style={{ color: '#000000' }}>Subscribe</button>
+            <button className='btn btn--outline btn-subscribe'>Subscribe</button>
+
           </form>
         </div>
       </section>

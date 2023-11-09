@@ -161,3 +161,18 @@
   
   @media screen and (max-width: 768px) {
   }
+  .btn-subscribe {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Letra blanca */
+    padding: 10px 20px; /* Tamaño del padding para hacer el botón más grande */
+    border: none; /* Eliminar el borde */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la letra */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+  }
+  
+  .btn-subscribe:hover {
+    background-color: #333333; /* Cambiar a un gris oscuro cuando se pasa el ratón por encima */
+  }
+  
